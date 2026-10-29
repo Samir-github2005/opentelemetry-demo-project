@@ -10,19 +10,16 @@ RUN ./gradlew
 RUN ./gradlew downloadRepos
 
 COPY . .
-COPY ./pb ./proto
+COPY ./pb/demo.proto ./proto/demo.proto
 RUN chmod +x ./gradlew
 RUN ./gradlew installDist -PprotoSourceDir=./proto
 
-#####################################################
 
 FROM eclipse-temurin:21-jre
 
 WORKDIR /usr/src/app/
 
 COPY --from=builder /usr/src/app/ ./
-
-ENV AD_PORT 9099
+ENV AD_PORT=8088
 
 ENTRYPOINT ["./build/install/opentelemetry-demo-ad/bin/Ad"]
-

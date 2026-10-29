@@ -22,3 +22,42 @@ src/*/*/Dockerfile
 ./src/shipping/target
 ###################################
 
+# Version control & Git
+.git
+.gitignore
+.gitattributes
+
+# CI/CD and Documentation
+.github
+docs
+*.md
+LICENSE
+
+# Environment files and credentials
+.env.override
+.dockerhub.env
+.ghcr.env
+*.pem
+*.key
+
+# IDE & OS
+.idea
+.vscode
+.DS_Store
+Thumbs.db
+
+# Dependencies and build outputs (let Docker install/build them inside)
+**/node_modules/
+**/build/
+**/target/
+**/bin/
+**/obj/
+**/.venv/
+**/__pycache__/
+*.pyc
+
+# Service specific build caches
+src/currency/client.js
+src/currency/node_modules/
+src/frontend/node_modules/
+src/shipping/target/

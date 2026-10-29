@@ -54,3 +54,80 @@ test/tracetesting/tracetesting-vars.yaml
 *.apk
 
 !src/currency/build
+
+
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Secrets and local environment overrides (CRITICAL)
+.env.override
+.dockerhub.env
+.ghcr.env
+*.local.env
+*.env.local
+*.pem
+*.key
+
+# Temporary/scratch files
+dockerddddd
+docker-compose.override.yml
+
+# Node / Frontend
+node_modules/
+.next/
+out/
+build/
+coverage/
+next-env.d.ts
+src/frontend/cypress/videos
+src/frontend/cypress/screenshots
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# Java / Gradle / Maven
+.gradle/
+.nb-gradle/
+.nb-gradle-properties
+build/
+bin/
+target/
+src/shipping/target/
+.classpath
+.project
+.settings
+
+# .NET / C#
+obj/
+.vs/
+
+# Vendor & packages
+vendor/
+composer.lock
+*.apk
+
+# Copied/generated protobuf files (re-generated during build)
+/src/accounting/src/protos/
+/src/cart/src/protos/
+/src/fraud-detection/src/main/proto
+/src/frontend/pb/
+/src/frontend/protos/
+/src/payment/demo.proto
+/src/shipping/proto/
+/src/currency/proto
+!src/currency/build
+
